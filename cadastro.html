@@ -127,26 +127,19 @@
                     Aqui</span></h3>
                 <!-- RD Mailform-->
                 <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact"
-                  method="post" action="bat/rd-mailform.php">
+                  method="post" id="formulario-cliente" action="bat/rd-mailform.php">
                   <div class="row row-10">
                     <div class="col-md-6 wow-outer">
                       <div class="form-wrap wow fadeSlideInUp">
-                        <label class="form-label-outside" for="contact-first-name">Nome</label>
-                        <input class="form-input" id="contact-first-name" type="text" name="name"
+                        <label class="form-label-outside" for="nome">Nome</label>
+                        <input class="form-input" id="nome" type="text" name="nome"
                           data-constraints="@Required">
                       </div>
                     </div>
                     <div class="col-md-6 wow-outer">
                       <div class="form-wrap wow fadeSlideInUp">
-                        <label class="form-label-outside" for="contact-last-name">Sobrenome</label>
-                        <input class="form-input" id="contact-last-name" type="text" name="lastName"
-                          data-constraints="@Required">
-                      </div>
-                    </div>
-                    <div class="col-md-6 wow-outer">
-                      <div class="form-wrap wow fadeSlideInUp">
-                        <label class="form-label-outside" for="contact-email">E-mail</label>
-                        <input class="form-input" id="contact-email" type="email" name="email"
+                        <label class="form-label-outside" for="email">E-mail</label>
+                        <input class="form-input" id="email" type="email" name="email"
                           data-constraints="@Email @Required">
                       </div>
                     </div>
