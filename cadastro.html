@@ -126,8 +126,7 @@
                 <h3 class="text-uppercase wow-outer"><span class="wow slideInDown" id="enviarCadastroMeio">Cadastra-se
                     Aqui</span></h3>
                 <!-- RD Mailform-->
-                <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact"
-                  method="post" id="formulario-cliente" action="bat/rd-mailform.php">
+                <form method="post" id="formulario-cliente">
                   <div class="row row-10">
                     <div class="col-md-6 wow-outer">
                       <div class="form-wrap wow fadeSlideInUp">
@@ -300,6 +299,31 @@
   <!-- Javascript-->
   <script src="js/core.min.js"></script>
   <script src="js/script.js"></script>
+  <script>
+  document.getElementById('formulario-cliente').addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o comportamento padrão de enviar o formulário
+  
+    // Obter os dados do formulário
+    var formData = new FormData(this);
+  
+    // Enviar os dados para o servidor via requisição AJAX
+    fetch('http://localhost:8080/cliente', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+      // Exibir uma mensagem de sucesso ou fazer outra ação, se necessário
+      console.log(data);
+      alert('Cliente criado com sucesso! ID: ' + data.id);
+    })
+    .catch(error => {
+      // Lidar com erros, se houver algum
+      console.error('Erro:', error);
+      alert('Ocorreu um erro ao criar o cliente. Por favor, tente novamente.');
+    });
+  });
+  </script>
 </body>
 
 </html>

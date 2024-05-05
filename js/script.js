@@ -1272,27 +1272,3 @@
 
 	});
 }());
-
-document.getElementById('formulario-cliente').addEventListener('submit', function(event) {
-	event.preventDefault(); // Impede o comportamento padrão de enviar o formulário
-
-	// Obter os dados do formulário
-	var formData = new FormData(this);
-
-	// Enviar os dados para o servidor via requisição AJAX
-	fetch('/cliente', {
-		method: 'POST',
-		body: formData
-	})
-	.then(response => response.json())
-	.then(data => {
-		// Exibir uma mensagem de sucesso ou fazer outra ação, se necessário
-		console.log(data);
-		alert('Cliente criado com sucesso! ID: ' + data.id);
-	})
-	.catch(error => {
-		// Lidar com erros, se houver algum
-		console.error('Erro:', error);
-		alert('Ocorreu um erro ao criar o cliente. Por favor, tente novamente.');
-	});
-});
