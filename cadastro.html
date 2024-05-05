@@ -300,29 +300,36 @@
   <script src="js/core.min.js"></script>
   <script src="js/script.js"></script>
   <script>
-  document.getElementById('formulario-cliente').addEventListener('submit', function(event) {
+document.getElementById('formulario-cliente').addEventListener('submit', function(event) {
     event.preventDefault(); // Impede o comportamento padrão de enviar o formulário
-  
-    // Obter os dados do formulário
-    var formData = new FormData(this);
-  
+
+    // Obter os dados do formulário e transformá-los em um objeto JSON
+    var formData = {
+        nome: document.getElementById('nome').value,
+        email: document.getElementById('email').value,
+        senha: document.getElementById('senha').value,
+    };
+
     // Enviar os dados para o servidor via requisição AJAX
     fetch('http://localhost:8080/cliente', {
-      method: 'POST',
-      body: formData
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json' // Definindo o tipo de mídia como JSON
+        },
+        body: JSON.stringify(formData) // Convertendo o objeto JSON para uma string JSON
     })
     .then(response => response.json())
     .then(data => {
-      // Exibir uma mensagem de sucesso ou fazer outra ação, se necessário
-      console.log(data);
-      alert('Cliente criado com sucesso! ID: ' + data.id);
+        // Exibir uma mensagem de sucesso ou fazer outra ação, se necessário
+        console.log(data);
+        alert('Cliente criado com sucesso! ID: ' + data.id);
     })
     .catch(error => {
-      // Lidar com erros, se houver algum
-      console.error('Erro:', error);
-      alert('Ocorreu um erro ao criar o cliente. Por favor, tente novamente.');
+        // Lidar com erros, se houver algum
+        console.error('Erro:', error);
+        alert('Ocorreu um erro ao criar o cliente. Por favor, tente novamente.');
     });
-  });
+});
   </script>
 </body>
 
