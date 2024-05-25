@@ -7713,6 +7713,7 @@ h3 + .owl-carousel, .heading-3 + .owl-carousel {
 @media (min-width: 576px) {
 	.row-sm-50 {
 		margin-bottom: -50px;
+		
 	}
 	.row-sm-50:empty {
 		margin-bottom: 0;
