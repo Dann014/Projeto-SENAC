@@ -34,11 +34,16 @@
     fill: #FFFFFF;
     color: #ffffff;
     border-radius: 25px;
-    background-color: rgb(255, 210, 215);
-    padding: 15px 50px;
+    background-color: #ffd2d7;
+    padding: 15px 45px;
     border: 0px;
     cursor: pointer;
 	font-weight: bold;
+}
+
+.botaoEssencial:hover {
+	color: #FFFFFF;
+	background-color: #232426;
 }
 
 .Conforto {
@@ -51,11 +56,16 @@
     fill: #FFFFFF;
     color: #ffffff;
     border-radius: 25px;
-    background-color: rgb(196, 177, 212);
-    padding: 15px 50px;
+    background-color: #c4b1d4;
+    padding: 15px 45px;
     border: 0px;
     cursor: pointer;
 	font-weight: bold;
+}
+
+.botaoConforto:hover {
+	color: #FFFFFF;
+	background-color: #232426;
 }
 
 .Premium {
@@ -68,11 +78,16 @@
     fill: #FFFFFF;
     color: #ffffff;
     border-radius: 25px;
-    background-color: rgb(255, 200, 98);
-    padding: 15px 50px;
+    background-color: #ffc862;
+    padding: 15px 45px;
     border: 0px;
     cursor: pointer;
 	font-weight: bold;
+}
+
+.botaoPremium:hover {
+	color: #FFFFFF;
+	background-color: #232426;
 }
 
 .Personalizado {
@@ -85,11 +100,16 @@
     fill: #FFFFFF;
     color: #ffffff;
     border-radius: 25px;
-    background-color: rgb(165, 187, 209);
-    padding: 15px 50px;
+    background-color: #a5bbd1;
+    padding: 15px 45px;
     border: 0px;
     cursor: pointer;
 	font-weight: bold;
+}
+
+.botaoPersonalizado:hover {
+	color: #FFFFFF;
+	background-color: #232426;
 }
 
 
