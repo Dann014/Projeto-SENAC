@@ -1,3 +1,98 @@
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 100px;
+    padding: 20px;
+}
+
+.bloco {
+    width: 450px;
+    height: 500px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 7px;
+    padding: 20px;
+    box-sizing: border-box;
+    flex: 1 1 calc(25% - 40px);
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.p2 {
+    color: #974aee;
+    font-size: 30px;
+}
+
+.Essencial {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(255, 210, 215);
+}
+
+.botaoEssencial {
+    fill: #FFFFFF;
+    color: #ffffff;
+    border-radius: 25px;
+    background-color: rgb(255, 210, 215);
+    padding: 15px 50px;
+    border: 0px;
+    cursor: pointer;
+	font-weight: bold;
+}
+
+.Conforto {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(196, 177, 212);
+}
+
+.botaoConforto {
+    fill: #FFFFFF;
+    color: #ffffff;
+    border-radius: 25px;
+    background-color: rgb(196, 177, 212);
+    padding: 15px 50px;
+    border: 0px;
+    cursor: pointer;
+	font-weight: bold;
+}
+
+.Premium {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(255, 200, 98);
+}
+
+.botaoPremium {
+    fill: #FFFFFF;
+    color: #ffffff;
+    border-radius: 25px;
+    background-color: rgb(255, 200, 98);
+    padding: 15px 50px;
+    border: 0px;
+    cursor: pointer;
+	font-weight: bold;
+}
+
+.Personalizado {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(165, 187, 209);
+}
+
+.botaoPersonalizado {
+    fill: #FFFFFF;
+    color: #ffffff;
+    border-radius: 25px;
+    background-color: rgb(165, 187, 209);
+    padding: 15px 50px;
+    border: 0px;
+    cursor: pointer;
+	font-weight: bold;
+}
+
+
 @charset "UTF-8";
 /*
 * Trunk version 2.0.0
