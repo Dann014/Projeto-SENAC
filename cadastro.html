@@ -104,9 +104,9 @@
                   </li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contatos</a>
                   </li>
-                  <li class="rd-nav-item" style="float: right;"><a class="rd-nav-link" href="contacts.html">Cadastro</a>
+                  <li class="rd-nav-item" style="float: right;"><a class="rd-nav-link" href="cadastro.html">Cadastro</a>
                   </li>
-                  <li class="rd-nav-item" style="float: right;"><a class="rd-nav-link" href="contacts.html">Login</a>
+                  <li class="rd-nav-item" style="float: right;"><a class="rd-nav-link" href="login.html">Login</a>
                   </li>
                 </ul>
               </div>
@@ -131,29 +131,26 @@
                     <div class="col-md-6 wow-outer">
                       <div class="form-wrap wow fadeSlideInUp">
                         <label class="form-label-outside" for="nome">Nome</label>
-                        <input class="form-input" id="nome" type="text" name="nome"
-                          data-constraints="@Required">
+                        <input class="form-input" id="nome" type="text" name="nome" data-constraints="@Required">
                       </div>
                     </div>
                     <div class="col-md-6 wow-outer">
                       <div class="form-wrap wow fadeSlideInUp">
                         <label class="form-label-outside" for="idade">Idade</label>
-                        <input class="form-input" id="idade" type="number" name="idade"
-                          data-constraints="@Required">
+                        <input class="form-input" id="idade" type="number" name="idade" data-constraints="@Required">
                       </div>
                     </div>
                     <div class="col-md-6 wow-outer">
                       <div class="form-wrap wow fadeSlideInUp">
                         <label class="form-label-outside" for="sexo">Sexo</label>
-                        <input class="form-input" id="sexo" type="text" name="sexo"
-                        data-constraints="@Required">
+                        <input class="form-input" id="sexo" type="text" name="sexo" data-constraints="@Required">
                       </div>
                     </div>
                     <div class="col-md-6 wow-outer">
                       <div class="form-wrap wow fadeSlideInUp">
                         <label class="form-label-outside" for="email">E-mail</label>
                         <input class="form-input" id="email" type="email" name="email"
-                        data-constraints="@Email @Required">
+                          data-constraints="@Email @Required">
                       </div>
                     </div>
                     <div class="col-md-6 wow-outer">
@@ -172,9 +169,8 @@
                     </div>
                     <div class="col-md-6 wow-outer">
                       <div class="form-wrap wow fadeSlideInUp">
-                        <label class="form-label-outside" for="login">Login</label> 
-                        <input class="form-input" id="login" type="text" name="login"
-                          data-constraints="@Required">
+                        <label class="form-label-outside" for="login">Login</label>
+                        <input class="form-input" id="login" type="text" name="login" data-constraints="@Required">
                       </div>
                     </div>
                     <div class="col-md-6 wow-outer">
@@ -186,7 +182,8 @@
                     <div class="col-md-6 wow-outer">
                       <div class="form-wrap wow fadeSlideInUp">
                         <label class="form-label-outside" for="confirm-senha">Confirmar Senha</label>
-                        <input class="form-input" id="confirm-senha" type="password" name="confirm-senha" data-constraints="@Required"> 
+                        <input class="form-input" id="confirm-senha" type="password" name="confirm-senha"
+                          data-constraints="@Required">
                       </div>
                     </div>
                   </div>
@@ -328,11 +325,11 @@
   <script src="js/core.min.js"></script>
   <script src="js/script.js"></script>
   <script>
-document.getElementById('formulario-cliente').addEventListener('submit', function(event) {
-    event.preventDefault(); // Impede o comportamento padrão de enviar o formulário
+    document.getElementById('formulario-cliente').addEventListener('submit', function (event) {
+      event.preventDefault(); // Impede o comportamento padrão de enviar o formulário
 
-    // Obter os dados do formulário e transformá-los em um objeto JSON
-    var formData = {
+      // Obter os dados do formulário e transformá-los em um objeto JSON
+      var formData = {
         nome: document.getElementById('nome').value,
         idade: document.getElementById('idade').value,
         sexo: document.getElementById('sexo').value,
@@ -341,28 +338,28 @@ document.getElementById('formulario-cliente').addEventListener('submit', functio
         endereco: document.getElementById('endereco').value,
         login: document.getElementById('login').value,
         senha: document.getElementById('senha').value,
-    };
+      };
 
-    // Enviar os dados para o servidor via requisição AJAX
-    fetch('http://localhost:8080/cliente', {
+      // Enviar os dados para o servidor via requisição AJAX
+      fetch('http://localhost:8080/cliente', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json' // Definindo o tipo de mídia como JSON
+          'Content-Type': 'application/json' // Definindo o tipo de mídia como JSON
         },
         body: JSON.stringify(formData) // Convertendo o objeto JSON para uma string JSON
-    })
-    .then(response => response.json())
-    .then(data => {
-        // Exibir uma mensagem de sucesso ou fazer outra ação, se necessário
-        console.log(data);
-        alert('Cliente criado com sucesso! ID: ' + data.id);
-    })
-    .catch(error => {
-        // Lidar com erros, se houver algum
-        console.error('Erro:', error);
-        alert('Ocorreu um erro ao criar o cliente. Por favor, tente novamente.');
+      })
+        .then(response => response.json())
+        .then(data => {
+          // Exibir uma mensagem de sucesso ou fazer outra ação, se necessário
+          console.log(data);
+          alert('Cliente criado com sucesso! ID: ' + data.id);
+        })
+        .catch(error => {
+          // Lidar com erros, se houver algum
+          console.error('Erro:', error);
+          alert('Ocorreu um erro ao criar o cliente. Por favor, tente novamente.');
+        });
     });
-});
   </script>
 </body>
 
