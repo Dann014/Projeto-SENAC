@@ -137,9 +137,23 @@
                     </div>
                     <div class="col-md-6 wow-outer">
                       <div class="form-wrap wow fadeSlideInUp">
+                        <label class="form-label-outside" for="idade">Idade</label>
+                        <input class="form-input" id="idade" type="number" name="idade"
+                          data-constraints="@Required">
+                      </div>
+                    </div>
+                    <div class="col-md-6 wow-outer">
+                      <div class="form-wrap wow fadeSlideInUp">
+                        <label class="form-label-outside" for="sexo">Sexo</label>
+                        <input class="form-input" id="sexo" type="text" name="sexo"
+                        data-constraints="@Required">
+                      </div>
+                    </div>
+                    <div class="col-md-6 wow-outer">
+                      <div class="form-wrap wow fadeSlideInUp">
                         <label class="form-label-outside" for="email">E-mail</label>
                         <input class="form-input" id="email" type="email" name="email"
-                          data-constraints="@Email @Required">
+                        data-constraints="@Email @Required">
                       </div>
                     </div>
                     <div class="col-md-6 wow-outer">
@@ -147,6 +161,20 @@
                         <label class="form-label-outside" for="contact-phone">Telefone</label>
                         <input class="form-input" id="contact-phone" type="text" name="phone"
                           data-constraints="@PhoneNumber @Required">
+                      </div>
+                    </div>
+                    <div class="col-md-6 wow-outer">
+                      <div class="form-wrap wow fadeSlideInUp">
+                        <label class="form-label-outside" for="endereco">Endereço</label>
+                        <input class="form-input" id="endereco" type="text" name="endereco"
+                          data-constraints="@Required">
+                      </div>
+                    </div>
+                    <div class="col-md-6 wow-outer">
+                      <div class="form-wrap wow fadeSlideInUp">
+                        <label class="form-label-outside" for="login">Login</label> 
+                        <input class="form-input" id="login" type="text" name="login"
+                          data-constraints="@Required">
                       </div>
                     </div>
                     <div class="col-md-6 wow-outer">
@@ -306,7 +334,12 @@ document.getElementById('formulario-cliente').addEventListener('submit', functio
     // Obter os dados do formulário e transformá-los em um objeto JSON
     var formData = {
         nome: document.getElementById('nome').value,
+        idade: document.getElementById('idade').value,
+        sexo: document.getElementById('sexo').value,
         email: document.getElementById('email').value,
+        telefone: document.getElementById('contact-phone').value,
+        endereco: document.getElementById('endereco').value,
+        login: document.getElementById('login').value,
         senha: document.getElementById('senha').value,
     };
 
