@@ -17894,3 +17894,16 @@ html[data-x-mode]:not(.lt-ie10) .not-animated {
 	background-color: #c8c8c8;
 }
 
+.Carrinho {
+	margin-top: 6rem;
+}
+
+.floatCarrinho {
+	display:  flex;
+}
+
+.floatCarrinho p {
+	border: 0;
+	margin: 0;
+	padding: 6rem;
+}
