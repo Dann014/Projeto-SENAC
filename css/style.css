@@ -17895,8 +17895,7 @@ html[data-x-mode]:not(.lt-ie10) .not-animated {
 }
 
 .pacoteDescricao {
-	background-color: #007bff;
-	border-radius: 15px;
-	border-top: #000;
-	padding: 10px 50px 10px 50px;
+	border-style: solid;
+    border-width: 1px 0 0;
+	padding: 20px 0 0;
 }
