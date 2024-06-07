@@ -15,87 +15,59 @@
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css" id="main-styles-link">
   <style>
-    .ie-panel {
-      display: none;
-      background: #212121;
-      padding: 10px 0;
-      box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .3);
-      clear: both;
-      text-align: center;
-      position: relative;
-      z-index: 1;
-    }
+.projetos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem; /* Espaço entre os itens */
+  padding: 1rem;
+}
 
-    html.ie-10 .ie-panel,
-    html.lt-ie-10 .ie-panel {
-      display: block;
-    }
+.projeto {
+  width: 100%;
+  border: 1px solid #DDD;
+  padding: 10px;
+  margin: 0; /* Remover margem do projeto */
+  box-sizing: border-box; /* Inclui padding e border no tamanho total */
+  display: flex;
+  flex-direction: column; /* Alinha os itens verticalmente */
+  align-items: center; /* Centraliza os itens horizontalmente */
+}
 
-    .projeto {
-      width: 300px;
-      border: 1px solid #DDD;
-      padding: 10px;
-      margin: 3rem;
-    }
+.projeto .imagem {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
 
-    .projeto .box {
-      display: flex;
-      
-      flex-direction: column;
-      
-      align-items: center;
-      
-    }
+.projeto .nome {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: black;
+  text-align: center;
+}
 
-    .projeto .imagem {
-      max-width: 100%;
-      
-      height: auto;
-      margin-bottom: 10px;
-      
-    }
+.projeto .emoji {
+  width: 100%;
+  display: flex;
+  justify-content: space-around; /* Espaço igual entre os itens */
+  flex-wrap: wrap; /* Permite que os itens se alinhem em várias linhas, se necessário */
+  margin-top: 10px; /* Espaço acima dos ícones */
+}
 
-    .projeto .nome {
-      font-size: 16px;
-      margin-bottom: 5px;
-      color: black;
-    }
+.projeto .emoji div[title] {
+  width: auto;
+  font-size: 12px;
+  text-align: center;
+  color: black;
+  padding-top: 4px;
+  border-top: 1px solid #DDD;
+}
 
-    .projeto div[title] {
-      width: 100%;
-      
-      text-align: center;
-      padding: 5px;
-      border-top: 1px solid #DDD;
-    }
+.projeto .emoji div[title] img {
+  width: 36px;
+  margin-bottom: 5px;
+}
 
-    .projeto div[title] img {
-      width: 36px;
-      margin-bottom: 5px;
-    }
-
-    .projeto .emoji {
-      width: 100%;
-    }
-
-    .projeto .emoji div[title] {
-      width: 25%;
-      
-      float: left;
-      
-      font-size: 12px;
-      text-align: center;
-      color: black;
-      padding-top: 4px;
-      border-top: 1px solid #DDD;
-      border-right: 1px solid #DDD;
-    }
-
-    
-    .projeto .emoji div[title] img {
-      width: 36px;
-      margin-bottom: 5px;
-    }
   </style>
 </head>
 
@@ -151,7 +123,7 @@
                     <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-map-marker"></span>
                     </div>
                     <div class="unit-body"><a class="link-default" href="tel:#">6942, Bairro Republica<br> Rua Alfredo
-                      Tamarez, BR 5043i534</a></div>
+                        Tamarez, BR 5043i534</a></div>
                   </article><a class="button button-gray-bordered button-winona" href="#">Solicite a Ligação</a>
                 </div>
               </div>
@@ -198,53 +170,53 @@
       </div>
     </section>
 
-    <div class="projeto">
+    <div class="projetos-container">
       <a href="#" rel="Planta de casa com suite e closet">
-        <div class="box fontOS">
-
+        <div class="projeto fontOS Propri">
           <img class="imagem" src="https://www.plantapronta.com.br/projetos/20/01t.jpg"
             alt="Planta de casa com suite e closet">
-
-          <div class="nome">Propriedade 01</div>
-          <div class="emoji">
-            <div title="tamanho do terreno">
-              <img src="https://www.plantapronta.com.br/img/icones/frente.png" title="tamanho do terreno"
-                style="width: 36px;"><br>
-              8x25m
-            </div>
-
-            <div title="dormitórios">
-              <img src="https://www.plantapronta.com.br/img/icones/quarto.png" title="dormitórios"
-                style="width: 36px;"><br>
-              3
-            </div>
-            <div title="banheiros">
-              <img src="https://www.plantapronta.com.br/img/icones/banheiro.png" title="banheiros"
-                style="width: 36px;"><br>
-              2
-            </div>
-            <div title="vagas na garagem">
-              <img src="https://www.plantapronta.com.br/img/icones/garagem.png" title="vagas na garagem"
-                style="width: 36px;"><br>
-              1
+          <div class="info">
+            <div class="nome">Propriedade 01</div>
+            <div class="emoji">
+              <div title="tamanho do terreno">
+                <img src="https://www.plantapronta.com.br/img/icones/frente.png" title="tamanho do terreno"
+                  style="width: 36px;"><br>
+                8x25m
+              </div>
+              <div title="dormitórios">
+                <img src="https://www.plantapronta.com.br/img/icones/quarto.png" title="dormitórios"
+                  style="width: 36px;"><br>
+                3
+              </div>
+              <div title="banheiros">
+                <img src="https://www.plantapronta.com.br/img/icones/banheiro.png" title="banheiros"
+                  style="width: 36px;"><br>
+                2
+              </div>
+              <div title="vagas na garagem">
+                <img src="https://www.plantapronta.com.br/img/icones/garagem.png" title="vagas na garagem"
+                  style="width: 36px;"><br>
+                1
+              </div>
             </div>
           </div>
-
         </div>
       </a>
     </div>
+
     <br><br>
-    
+
     <!-- Catalogo de Propriedades fodas-->
     <section class="section novi-background section-md text-center">
       <div class="container">
-        <h3 class="text-uppercase font-weight-bold wow-outer"><span class="wow slideInDown">Propriedades Recomendadas</span></h3>
+        <h3 class="text-uppercase font-weight-bold wow-outer"><span class="wow slideInDown">Propriedades
+            Recomendadas</span></h3>
         <div class="row row-lg-50 row-35 offset-top-2">
           <!-- Propriedade 01 -->
           <div class="col-md-3 wow-outer">
             <article class="post-modern wow slideInLeft">
               <a class="post-modern-media" href="Propriedade.html">
-                <img src="images/casa01.png" alt="" width="571" height="353"/>
+                <img src="images/casa01.png" alt="" width="571" height="353" />
               </a>
               <h4 class="post-modern-title"><a class="post-modern-title" href="#">Propriedade 01</a></h4>
               <ul class="post-modern-meta">
@@ -259,7 +231,7 @@
           <div class="col-md-3 wow-outer">
             <article class="post-modern wow slideInLeft">
               <a class="post-modern-media" href="Propriedade.html">
-                <img src="images/casa01.png" alt="" width="571" height="353"/>
+                <img src="images/casa01.png" alt="" width="571" height="353" />
               </a>
               <h4 class="post-modern-title"><a class="post-modern-title" href="#">Propriedade 02</a></h4>
               <ul class="post-modern-meta">
@@ -274,7 +246,7 @@
           <div class="col-md-3 wow-outer">
             <article class="post-modern wow slideInLeft">
               <a class="post-modern-media" href="Propriedade.html">
-                <img src="images/casa01.png" alt="" width="571" height="353"/>
+                <img src="images/casa01.png" alt="" width="571" height="353" />
               </a>
               <h4 class="post-modern-title"><a class="post-modern-title" href="#">Propriedade 03</a></h4>
               <ul class="post-modern-meta">
@@ -289,7 +261,7 @@
           <div class="col-md-3 wow-outer">
             <article class="post-modern wow slideInLeft">
               <a class="post-modern-media" href="Propriedade.html">
-                <img src="images/casa01.png" alt="" width="571" height="353"/>
+                <img src="images/casa01.png" alt="" width="571" height="353" />
               </a>
               <h4 class="post-modern-title"><a class="post-modern-title" href="#">Propriedade 04</a></h4>
               <ul class="post-modern-meta">
@@ -301,7 +273,7 @@
             </article>
           </div>
         </div>
-      </div>  
+      </div>
     </section>
 
 
@@ -313,7 +285,8 @@
             <div class="col-lg-4">
               <h5 class="font-weight-bold text-uppercase text-white">Sobre-Nós</h5>
               <p class="footer-advanced-text">Nosso Residencial de Casas de Repouso para Idosos oferece um ambiente
-                acolhedor e seguro, onde os residentes recebem cuidados personalizados e atenção individualizada. Com uma
+                acolhedor e seguro, onde os residentes recebem cuidados personalizados e atenção individualizada. Com
+                uma
                 equipe dedicada e instalações adaptadas, proporcionamos uma experiência enriquecedora, promovendo o
                 bem-estar físico, emocional e social dos idosos.</p>
             </div>
@@ -329,7 +302,8 @@
               </article>
               <!-- Post Inline-->
               <article class="post-inline">
-                <p class="post-inline-title"><a href="#">Feiras e Mercados de Artesanato: Oferecido variadades de produtos
+                <p class="post-inline-title"><a href="#">Feiras e Mercados de Artesanato: Oferecido variadades de
+                    produtos
                     e trocas entre os membros da comunidade</a></p>
                 <ul class="post-inline-meta">
                   <li>by Marcos Gabriel</li>
@@ -341,43 +315,43 @@
               <h5 class="font-weight-bold text-uppercase text-white">Galeria</h5>
               <div class="row row-x-10" data-lightgallery="group">
                 <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/gallery-original-1.jpg"
-                    data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/footer-gallery-1-85x85.jpg"
-                      alt="" />
+                    data-lightgallery="item"><img class="thumbnail-minimal-image"
+                      src="images/footer-gallery-1-85x85.jpg" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
                 <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/gallery-original-2.jpg"
-                    data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/footer-gallery-2-85x85.jpg"
-                      alt="" />
+                    data-lightgallery="item"><img class="thumbnail-minimal-image"
+                      src="images/footer-gallery-2-85x85.jpg" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
                 <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/gallery-original-3.jpg"
-                    data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/footer-gallery-3-85x85.jpg"
-                      alt="" />
+                    data-lightgallery="item"><img class="thumbnail-minimal-image"
+                      src="images/footer-gallery-3-85x85.jpg" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
                 <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/gallery-original-4.jpg"
-                    data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/footer-gallery-4-85x85.jpg"
-                      alt="" />
+                    data-lightgallery="item"><img class="thumbnail-minimal-image"
+                      src="images/footer-gallery-4-85x85.jpg" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
                 <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/gallery-original-5.jpg"
-                    data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/footer-gallery-5-85x85.jpg"
-                      alt="" />
+                    data-lightgallery="item"><img class="thumbnail-minimal-image"
+                      src="images/footer-gallery-5-85x85.jpg" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
                 <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/gallery-original-6.jpg"
-                    data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/footer-gallery-6-85x85.jpg"
-                      alt="" />
+                    data-lightgallery="item"><img class="thumbnail-minimal-image"
+                      src="images/footer-gallery-6-85x85.jpg" alt="" />
                     <div class="thumbnail-minimal-caption"> </div>
                   </a></div>
                 <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/gallery-original-7.jpg"
-                    data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/footer-gallery-7-85x85.jpg"
-                      alt="" />
+                    data-lightgallery="item"><img class="thumbnail-minimal-image"
+                      src="images/footer-gallery-7-85x85.jpg" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
                 <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/gallery-original-8.jpg"
-                    data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/footer-gallery-8-85x85.jpg"
-                      alt="" />
+                    data-lightgallery="item"><img class="thumbnail-minimal-image"
+                      src="images/footer-gallery-8-85x85.jpg" alt="" />
                     <div class="thumbnail-minimal-caption"></div>
                   </a></div>
               </div>
