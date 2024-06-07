@@ -17917,3 +17917,11 @@ html[data-x-mode]:not(.lt-ie10) .not-animated {
 	margin: 0;
 	padding: 6rem;
 }
+
+.projeto {
+	display: flex;
+}
+
+.Propri {
+	padding: 3rem;
+}
