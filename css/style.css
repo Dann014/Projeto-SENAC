@@ -17894,9 +17894,9 @@ html[data-x-mode]:not(.lt-ie10) .not-animated {
 	background-color: #c8c8c8;
 }
 
-/* .slaTexto h5 {
-	margin-top: 0;
-  } */
+.slaTexto h5 {
+	width: 770px;
+  } 
 
 /* .pacoteDescricao {
 	border-style: solid;
