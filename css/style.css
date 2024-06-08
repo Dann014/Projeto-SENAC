@@ -17894,14 +17894,23 @@ html[data-x-mode]:not(.lt-ie10) .not-animated {
 	background-color: #c8c8c8;
 }
 
-.slaTexto  {
-	padding: auto;
-}
+.slaTexto h5 {
+	width: 770px;
+  } 
 
-.pacoteDescricao {
+/* .pacoteDescricao {
 	border-style: solid;
     border-width: 1px 0 0;
 	padding: 20px 0 0;
+} */
+
+.main-image > img{
+	width: 770px;
+	height: 456px;
+}
+
+.main-image > img {
+	object-fit: cover;
 }
 
 .Carrinho {
