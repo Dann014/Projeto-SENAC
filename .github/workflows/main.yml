@@ -3,10 +3,10 @@ name: CI Workflow
 on:
   push:
     branches:
-      - main
+      - pedro
   pull_request:
     branches:
-      - main
+      - pedro
 
 jobs:
   build:
